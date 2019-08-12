@@ -15,7 +15,10 @@
 }
 
 li {
+    width: inherit;
     list-style: none;
+    justify-content: center;
+    align-content: center;
 }
 
 a {
@@ -32,19 +35,18 @@ header {
 
 .max-header {
     background-color: #000000;
-    height: 125px;
+    height: 180px;
 }
 
 .min-header {
     background-color: #AF0000;
-    height: 80px;
+    height: 120px;
 }
 
 .container {
     padding: 0;
     margin: 0 auto;
 }
-
 .container-menu {
     max-width: 1200px;
     height: 100%;
@@ -57,24 +59,73 @@ header {
     align-content: center;
 }
 
+/* inicio logo */
 .logo {
     grid-area: lgo;
 }
-
-.logo svg {
-    fill-opacity: 0;
-    transition: all 0.2s ease-out;
-}
-
 .max-logo svg {
-    width: 300px;
-    fill: #ff0000;
+    width: 250px;
+    height: auto;
+    fill: #ffffff;
 }
-
 .min-logo svg {
-    width: 200px;
+    width: 160px;
+    height: auto;
     fill: #000000;
 }
+
+/*fim logo
+=============================
+inicio menu midias*/
+
+.facebook {
+    grid-area: mnu;
+}
+.max-facebook svg {
+    width: 80px;
+    fill: #ffffff;
+}
+.min-facebook svg {
+    width: 20px;
+    fill: #ffffff;
+}
+.youtube {
+    grid-area: mnu;
+}
+.max-youtube svg {
+    width: 60px;
+    fill: #ffffff;
+}
+.min-youtube svg {
+    width: 20px;
+    fill: #ffffff;
+}
+.instagram {
+    grid-area: mnu;
+}
+.max-instagram svg {
+    width: 55px;
+    fill: #ffffff;
+}
+.min-instagram svg {
+    width: 20px;
+    fill: #ffffff;
+}
+.spotify {
+    grid-area: mnu;
+}
+.max-spotify svg {
+    width: 60px;
+    fill: #ffffff;
+}
+.min-spotify svg {
+    width: 20px;
+    fill: #ffffff;
+}
+
+/* fim menu midias
+==============================
+*/
 
 .nav-bar {
     grid-area: nav;
@@ -93,6 +144,11 @@ header {
     text-transform: uppercase;
     transition: all 0.4s ease-out;
 }
+.nav-bar svg {
+	display: grid;
+    grid-auto-flow: column;
+    grid-gap: 20px;
+}
 
 .max-nav a {
     font-size: 1em;
@@ -106,17 +162,18 @@ header {
 
 .ghost {
     width: 100%;
-    height: 80px;
+    height: 175px;
     background-color: #ff0000;
 }
 
 @media(max-width: 768px) {
     .max-header {
-        height: 80px;
+        height: 140px;
+        z-index: 999;
     }
 
     .min-header {
-        height: 60px;
+        height: 100px;
     }
 
     .container-menu {
@@ -127,13 +184,15 @@ header {
     }
 
     .max-logo svg {
-        width: 200px;
+        width: 180px;
+        height: auto;
         fill: #ff0000;
     }
 
     .min-logo svg {
         width: 140px;
-        fill: #ffffff;
+        height: auto;
+        fill: #000000;
     }
 
     .menu {
@@ -141,14 +200,12 @@ header {
         display: grid;
         align-content: center;
     }
-
+    
     .hamburger {
         position: relative;
         width: 40px;
         height: 3px;
-        
     }
-
     .hamburger::before {
         content: "";
         position: absolute;
@@ -158,7 +215,6 @@ header {
         height: 100%;
         background-color: #ff0000;
     }
-
     .hamburger::after {
         content: "";
         position: absolute;
@@ -179,29 +235,36 @@ header {
         position: absolute;
         left: 0;
         width: 100%;
-        background-color: #444444;
-        transform: translateX(100%);
+        background-color: rgba(99, 00, 00, 0.9);
+        transform: translateX(-100%);
         transition: all 0.4s ease-out;
+        z-index: 0;
     }
 
     .max-nav {
-        top: 80px;
-        height: calc(100vh - 80px);
+        top: 140px;
+        height: calc(100vh - 140px);
     }
 
     .min-nav {
-        top: 60px;
-        height: calc(100vh - 60px);
+        top: 100px;
+        height: calc(100vh - 100px);
     }
 
     .menu-opened {
         transform: translateX(0);
+        z-index: 0;
     }
 
-    .nav-bar ul {
+    .nav-bar #menu {
         justify-content: center;
         grid-auto-flow: row;
-        grid-gap: 60px;
+        grid-gap: 40px;
+    }
+    .nav-bar #midia {
+        justify-content: center;
+        grid-auto-flow: column;
+        grid-gap: 20px;
     }
 
     .nav-bar li {
@@ -209,8 +272,8 @@ header {
     }
 
     .min-nav a {
-        font-size: 1em;
-        color: #000000;
+        font-size: 1.40em;
+        color: #ffffff;
     }
 }
 
