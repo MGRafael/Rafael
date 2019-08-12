@@ -13,47 +13,48 @@ function toggleHeader() {
         $header.classList.add('min-header');
         $logo.classList.remove('max-logo');
         $logo.classList.add('min-logo');
+        $navBar.classList.remove('max-nav')
+        $navBar.classList.add('min-nav');
+        $menu.firstElementChild.classList.remove('max-hamburger');
+        $menu.firstElementChild.classList.add('min-hamburger');
         $facebook.classList.remove('max-facebook');
-        $facebook.classList.add('min-facebool');
+        $facebook.classList.add('min-facebook');
         $youtube.classList.remove('max-youtube');
         $youtube.classList.add('min-youtube');
         $instagram.classList.remove('max-instagram');
         $instagram.classList.add('min-instagram');
         $spotify.classList.remove('max-spotify');
         $spotify.classList.add('min-spotify');
-        $navBar.classList.remove('max-nav')
-        $navBar.classList.add('min-nav');
-        $menu.firstElementChild.classList.remove('max-hamburger');
-        $menu.firstElementChild.classList.add('min-hamburger');
     } else if (window.pageYOffset <= 60 && $header.classList.contains('min-header')) {
         $header.classList.add('max-header');
         $header.classList.remove('min-header');
         $logo.classList.add('max-logo');
         $logo.classList.remove('min-logo');
+        $navBar.classList.add('max-nav');
+        $navBar.classList.remove('min-nav');
+        $menu.firstElementChild.classList.add('max-hamburger');
+        $menu.firstElementChild.classList.remove('min-hamburger');
         $facebook.classList.add('max-facebook');
-        $facebook.classList.remove('min-facebool');
+        $facebook.classList.remove('min-facebook');
         $youtube.classList.add('max-youtube');
         $youtube.classList.remove('min-youtube');
         $instagram.classList.add('max-instagram');
         $instagram.classList.remove('min-instagram');
         $spotify.classList.add('max-spotify');
         $spotify.classList.remove('min-spotify');
-        $navBar.classList.add('max-nav');
-        $navBar.classList.remove('min-nav');
-        $menu.firstElementChild.classList.add('max-hamburger');
-        $menu.firstElementChild.classList.remove('min-hamburger');
     }
 }
 
 $menu.addEventListener('click',toggleMenu,false);
 var isOpen = false;
-
 function toggleMenu() {
     if (!isOpen) {
         $navBar.classList.add('menu-opened');
+        $menu.firstElementChild.classList.add('close-btn');
         isOpen = true;
     } else {
         $navBar.classList.remove('menu-opened');
+        $menu.firstElementChild.classList.remove('close-btn');
         isOpen = false;
     }
 }
@@ -63,5 +64,4 @@ function navClick(evt) {
     if (evt.target.tagName == 'A') {
         toggleMenu();
     }
-    
 }
