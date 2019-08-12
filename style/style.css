@@ -25,6 +25,7 @@ a {
     text-decoration: none;
 }
 
+/* HEADER*/
 header {
     position: fixed;
     width: 100%;
@@ -32,17 +33,16 @@ header {
     font-size: 18px;
     transition: all 0.5s ease-out;
 }
-
 .max-header {
     background-color: #000000;
     height: 180px;
 }
-
 .min-header {
     background-color: #AF0000;
     height: 120px;
 }
 
+/*=====CONTAINERS=====*/
 .container {
     padding: 0;
     margin: 0 auto;
@@ -59,14 +59,14 @@ header {
     align-content: center;
 }
 
-/* inicio logo */
+/*=====LOGO-BANDA=====*/
 .logo {
     grid-area: lgo;
 }
 .max-logo svg {
     width: 250px;
     height: auto;
-    fill: #ffffff;
+    fill: #ff0000;
 }
 .min-logo svg {
     width: 160px;
@@ -74,87 +74,120 @@ header {
     fill: #000000;
 }
 
-/*fim logo
-=============================
-inicio menu midias*/
-
+/*=====MENU DE MIDIAS SOCIAIS=====*/
+.midia {
+    justify-content: center;
+}
 .facebook {
     grid-area: mnu;
 }
 .max-facebook svg {
-    width: 80px;
+    width: 20px;
     fill: #ffffff;
 }
 .min-facebook svg {
-    width: 20px;
+    width: 15px;
     fill: #ffffff;
 }
 .youtube {
     grid-area: mnu;
 }
 .max-youtube svg {
-    width: 60px;
+    width: 24px;
     fill: #ffffff;
 }
 .min-youtube svg {
-    width: 20px;
+    width: 19px;
     fill: #ffffff;
 }
 .instagram {
     grid-area: mnu;
 }
 .max-instagram svg {
-    width: 55px;
+    width: 21px;
     fill: #ffffff;
 }
 .min-instagram svg {
-    width: 20px;
+    width: 16px;
     fill: #ffffff;
 }
 .spotify {
     grid-area: mnu;
 }
 .max-spotify svg {
-    width: 60px;
+    width: 23px;
     fill: #ffffff;
 }
 .min-spotify svg {
-    width: 20px;
+    width: 18px;
     fill: #ffffff;
 }
 
-/* fim menu midias
-==============================
-*/
-
+/*=====NAV BAR=====*/
 .nav-bar {
     grid-area: nav;
     display: grid;
-    align-content: center;
+    align-content: flex-end;
 }
-
-.nav-bar ul {
+.nav-bar #menu1 {
+    position: relative;
     display: grid;
     grid-auto-flow: column;
-    grid-gap: 20px;
+    grid-gap: 50px;
+    justify-content: center;
 }
-
+.nav-bar #midia {
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 30px;
+    padding: 10px; 
+    justify-content: center;
+}
 .nav-bar a {
+    position: relative;
     font-family: "Essays1743-Bold";
     text-transform: uppercase;
     transition: all 0.4s ease-out;
 }
-.nav-bar svg {
-	display: grid;
-    grid-auto-flow: column;
-    grid-gap: 20px;
+.nav-bar #menu1 a::before {
+    content: "";
+    position: absolute;
+    top: -1px;
+    width: 0;
+    width: 100%;
+    height: 2px;
+    background-color: currentColor;
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: all 0.2s ease-out;
+}
+.nav-bar #menu1 a:hover::before {
+    transform: scaleX(1);    
+}
+.nav-bar #menu1 a::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: currentColor;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: all 0.2s ease-out;
+}
+.nav-bar #menu1 a:hover::after {
+    transform: scaleX(1);    
+}
+
+.nav-bar #midia a:hover path {
+	fill: #ff0000;
 }
 
 .max-nav a {
     font-size: 1em;
     color: #ffffff;
 }
-
 .min-nav a {
     font-size: 0.875em;
     color: #000000;
@@ -169,7 +202,6 @@ inicio menu midias*/
 @media(max-width: 768px) {
     .max-header {
         height: 140px;
-        z-index: 999;
     }
 
     .min-header {
@@ -203,49 +235,92 @@ inicio menu midias*/
     
     .hamburger {
         position: relative;
-        width: 40px;
-        height: 3px;
+        width: 50px;
+        height: 5px;
+        transition: all 0.4s ease-out;
     }
     .hamburger::before {
         content: "";
         position: absolute;
-        top: -8px;
+        top: -12px;
         left: 0;
         width: 100%;
         height: 100%;
+        transition: all 0.4s ease-out;
         background-color: #ff0000;
     }
     .hamburger::after {
         content: "";
         position: absolute;
-        top: 8px;
+        top: 12px;
         left: 0;
         width: 100%;
         height: 100%;
+        transition: all 0.4s ease-out;
         background-color: #ff0000;
     }
-    .max-hamburger, max-hamburger::before, max-hamburger::after {
+    .max-hamburger, .max-hamburger::before, .max-hamburger::after {
         background-color: #ff0000;
     }
-    .min-hamburger, min-hamburger::before, min-hamburger::after {
+    .min-hamburger, .min-hamburger::before, .min-hamburger::after {
         background-color: #ff0000;
+    }
+    .close-btn {
+        width: 50px;
+        transform: rotateZ(45deg);
+    }
+    .close-btn::before, .close-btn::after{
+        top: 0;
+        transform: rotateZ(90deg);
     }
 
     .nav-bar {
         position: absolute;
+        top: 80px;
         left: 0;
-        width: 100%;
+        width: 100% ;
+        height: calc(100vh - 140px);
+        align-content:flex-start;
         background-color: rgba(99, 00, 00, 0.9);
-        transform: translateX(-100%);
-        transition: all 0.4s ease-out;
-        z-index: 0;
+        transform-origin: 20px;
+        transform: translateX(100%);
+        transition: all 0.5s ease-out;
     }
-
+    .nav-bar #menu1 {
+        display: grid;
+        grid-auto-flow: row;
+        grid-gap: 40px;
+        padding-bottom: 60px;
+    }
+    .max-facebook svg {
+    width: 40px;
+    }
+    .min-facebook svg {
+        width: 30px;
+    }
+    .max-youtube svg {
+        width: 44px;
+    }
+    .min-youtube svg {
+        width: 34px;
+    }
+    .max-instagram svg {
+        width: 41px;
+    }
+    .min-instagram svg {
+        width: 32px;
+    }
+    .max-spotify svg {
+        width: 43px;
+    }
+    .min-spotify svg {
+        width: 33px;
+    }
+    
     .max-nav {
         top: 140px;
         height: calc(100vh - 140px);
     }
-
     .min-nav {
         top: 100px;
         height: calc(100vh - 100px);
@@ -253,26 +328,15 @@ inicio menu midias*/
 
     .menu-opened {
         transform: translateX(0);
-        z-index: 0;
-    }
-
-    .nav-bar #menu {
-        justify-content: center;
-        grid-auto-flow: row;
-        grid-gap: 40px;
-    }
-    .nav-bar #midia {
-        justify-content: center;
-        grid-auto-flow: column;
-        grid-gap: 20px;
     }
 
     .nav-bar li {
         text-align: center;
+        font-size: 1.8em;
     }
 
     .min-nav a {
-        font-size: 1.40em;
+        font-size: 1em;
         color: #ffffff;
     }
 }
@@ -284,7 +348,7 @@ main {
 }
 
 main section {
-    padding-top: 120px;
+    padding-top: 140px;
     display: grid;
     justify-content: space-around;
     align-content: flex-start;
