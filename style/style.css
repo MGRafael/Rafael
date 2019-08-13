@@ -289,7 +289,7 @@ header {
     .nav-bar #menu1 {
         display: grid;
         grid-auto-flow: row;
-        grid-gap: 15px;
+        grid-gap: 20px;
         padding-bottom: 10px;
     }
     .max-facebook svg {
