@@ -289,8 +289,8 @@ header {
     .nav-bar #menu1 {
         display: grid;
         grid-auto-flow: row;
-        grid-gap: 40px;
-        padding-bottom: 60px;
+        grid-gap: 10px;
+        padding-bottom: 10px;
     }
     .max-facebook svg {
     width: 40px;
@@ -332,7 +332,7 @@ header {
 
     .nav-bar li {
         text-align: center;
-        font-size: 1.5em;
+        font-size: 1.8em;
     }
 
     .min-nav a {
