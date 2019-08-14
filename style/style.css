@@ -95,6 +95,8 @@ header {
 .facebook {
     grid-area: mnu;
     align-content: center;
+    display: grid;
+    justify-content: center;
 }
 .facebook svg{
 	transition: all 0.9s ease-out;
@@ -111,6 +113,9 @@ header {
 }
 .youtube {
     grid-area: mnu;
+    align-content: center;
+    display: grid;
+    justify-content: center;
 }
 .youtube svg{
 	transition: all 0.9s ease-out;
@@ -125,6 +130,9 @@ header {
 }
 .instagram {
     grid-area: mnu;
+    align-content: center;
+    display: grid;
+    justify-content: center;
 }
 .instagram svg{
 	transition: all 0.9s ease-out;
@@ -139,6 +147,9 @@ header {
 }
 .spotify {
     grid-area: mnu;
+    align-content: center;
+    display: grid;
+    justify-content: center;
 }
 .spotify svg{
 	transition: all 0.9s ease-out;
