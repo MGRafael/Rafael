@@ -473,6 +473,9 @@ header {
         grid-auto-flow: column;
         grid-gap: 10px;
     }
+    .mobile-nav-bar #menu1 a:onClick::before, #menu1 a:hover::after {
+    transform: scaleX(1);
+}
 
     .hover {
         width: 60px;
