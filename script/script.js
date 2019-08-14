@@ -4,7 +4,7 @@ const $facebook = document.querySelectorAll('.facebook')[0];
 const $youtube = document.querySelectorAll('.youtube')[0];
 const $instagram = document.querySelectorAll('.instagram')[0];
 const $spotify = document.querySelectorAll('.spotify')[0];
-const $navBar = document.querySelectorAll('.nav-bar')[0];
+const $mobileNavBar = document.querySelectorAll('.mobile-nav-bar')[0];
 const $menu = document.querySelectorAll('.menu')[0];
 window.addEventListener('scroll',toggleHeader,false);
 function toggleHeader() {
@@ -13,8 +13,8 @@ function toggleHeader() {
         $header.classList.add('min-header');
         $logo.classList.remove('max-logo');
         $logo.classList.add('min-logo');
-        $navBar.classList.remove('max-nav')
-        $navBar.classList.add('min-nav');
+        $mobileNavBar.classList.remove('max-nav')
+        $mobileNavBar.classList.add('min-nav');
         $menu.firstElementChild.classList.remove('max-hamburger');
         $menu.firstElementChild.classList.add('min-hamburger');
         $facebook.classList.remove('max-facebook');
@@ -30,8 +30,8 @@ function toggleHeader() {
         $header.classList.remove('min-header');
         $logo.classList.add('max-logo');
         $logo.classList.remove('min-logo');
-        $navBar.classList.add('max-nav');
-        $navBar.classList.remove('min-nav');
+        $mobileNavBar.classList.add('max-nav');
+        $mobileNavBar.classList.remove('min-nav');
         $menu.firstElementChild.classList.add('max-hamburger');
         $menu.firstElementChild.classList.remove('min-hamburger');
         $facebook.classList.add('max-facebook');
@@ -49,18 +49,18 @@ $menu.addEventListener('click',toggleMenu,false);
 var isOpen = false;
 function toggleMenu() {
     if (!isOpen) {
-        $navBar.classList.add('menu-opened');
+        $mobileNavBar.classList.add('menu-opened');
         $menu.firstElementChild.classList.add('close-btn');
         isOpen = true;
     } else {
-        $navBar.classList.remove('menu-opened');
+        $mobileNavBar.classList.remove('menu-opened');
         $menu.firstElementChild.classList.remove('close-btn');
         isOpen = false;
     }
 }
 
-$navBar.addEventListener('click',navClick,false);
-function navClick(evt) {
+$mobileNavBar.addEventListener('click',mobileNavClick,false);
+function mobileNavClick(evt) {
     if (evt.target.tagName == 'A') {
         toggleMenu();
     }
