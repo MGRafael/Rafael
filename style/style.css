@@ -1,4 +1,4 @@
-@font-face {
+ @font-face{
     src: url("../fonts/Tippa.ttf");
     font-family: "Tippa";
 }
@@ -23,10 +23,15 @@ li {
 a {
     text-decoration: none;
 }
+.hover {
+	width: 30px;
+    height: 32px; 
+}
+
 .hover:hover {
     background-color: #ffffff;
 }
-a:hover path {
+.hover:hover path {
 	fill: #000000;
 }
 
@@ -89,6 +94,7 @@ header {
 }
 .facebook {
     grid-area: mnu;
+    align-content: center;
 }
 .facebook svg{
 	transition: all 0.9s ease-out;
@@ -146,33 +152,33 @@ header {
     fill: #000000;
 }
 
-/*=====NAV-BAR=====*/
-.nav-bar {
+/*=====WEB-NAV-BAR=====*/
+.web-nav-bar {
     grid-area: nav;
     display: grid;
     align-content: flex-end;
 }
-.nav-bar #menu1 {
+.web-nav-bar #menu1 {
     position: relative;
     display: grid;
     grid-auto-flow: column;
     grid-gap: 20px;
     justify-content: center;
 }
-.nav-bar #midia {
+.web-nav-bar #midia {
     position: relative;
     display: grid;
     grid-auto-flow: column;
     grid-gap: 20px;
     justify-content: center;
 }
-.nav-bar a {
+.web-nav-bar a {
     position: relative;
     font-family: "Essays1743-Bold";
     text-transform: uppercase;
     transition: all 0.4s ease-out;
 }
-.nav-bar #menu1 a::before {
+.web-nav-bar #menu1 a::before {
     content: "";
     position: absolute;
     top: 3px;
@@ -184,13 +190,13 @@ header {
     transform: scaleX(0);
     transition: all 0.3s ease-out;
 }
-.nav-bar a {
+.web-nav-bar a {
     position: relative;
     font-family: "Essays1743-Bold";
     text-transform: uppercase;
     transition: all 0.4s ease-out;
 }
-.nav-bar #menu1 a::after {
+.web-nav-bar #menu1 a::after {
     content: "";
     position: absolute;
     bottom: 3px;
@@ -202,7 +208,67 @@ header {
     transform: scaleX(0);
     transition: all 0.3s ease-out;
 }
-.nav-bar #menu1 a:hover::before, #menu1 a:hover::after {
+.web-nav-bar #menu1 a:hover::before, #menu1 a:hover::after {
+    transform: scaleX(1);    
+}
+
+/*=====MOBILE-NAV-BAR=====*/
+.mobile-nav-bar {
+    grid-area: nav;
+    display: grid;
+    align-content: flex-end;
+}
+.mobile-nav-bar #menu1 {
+    position: relative;
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 20px;
+    justify-content: center;
+}
+.mobile-nav-bar #midia {
+    position: relative;
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 20px;
+    justify-content: center;
+}
+.mobile-nav-bar a {
+    position: relative;
+    font-family: "Essays1743-Bold";
+    text-transform: uppercase;
+    transition: all 0.4s ease-out;
+}
+.mobile-nav-bar #menu1 a::before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: currentColor;
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: all 0.3s ease-out;
+}
+.mobile-nav-bar a {
+    position: relative;
+    font-family: "Essays1743-Bold";
+    text-transform: uppercase;
+    transition: all 0.4s ease-out;
+}
+.mobile-nav-bar #menu1 a::after {
+    content: "";
+    position: absolute;
+    bottom: 3px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: currentColor;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: all 0.3s ease-out;
+}
+.mobile-nav-bar #menu1 a:hover::before, #menu1 a:hover::after {
     transform: scaleX(1);    
 }
 
@@ -223,6 +289,16 @@ header {
 }
 
 @media(max-width: 768px) {
+    header {
+	z-index: 3;
+}
+    .web-nav-bar {
+	display: none;
+}
+    .mobile-nav-bar {
+	display: grid;
+    z-index: 2;
+}
     .max-header {
         height: 140px;
     }
@@ -297,19 +373,20 @@ header {
         transform: rotateZ(90deg);
     }
 
-    .nav-bar {
+    .mobile-nav-bar {
         position: absolute;
         top: 80px;
         left: 0;
         width: 100% ;
         height: calc(100vh - 140px);
         align-content:flex-start;
-        background-color: rgba(99, 00, 00, 0.9);
+        background-color: rgba(99, 00, 00, 0.8);
         transform-origin: 20px;
-        transform: translateX(100%);
+        transform: translateY(-100%);
         transition: all 0.5s ease-out;
+        
     }
-    .nav-bar #menu1 {
+    .mobile-nav-bar #menu1 {
         display: grid;
         grid-auto-flow: row;
         grid-gap: 25px;
@@ -350,10 +427,10 @@ header {
     }
 
     .menu-opened {
-        transform: translateX(0);
+        transform: translateY(0);
     }
 
-    .nav-bar li {
+    .mobile-nav-bar li {
         text-align: center;
         font-size: 1.8em;
     }
@@ -378,6 +455,7 @@ main section {
     font-family: "Tippa";
     font-size: 1em;
     color: #ffffff;
+    z-index: 1
 }
 
 main section:nth-child(odd) {
