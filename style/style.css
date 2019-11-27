@@ -463,10 +463,10 @@ aside {
 
 @media(max-width: 768px) {
     .hover {
-    width: 55px;
-    height: 55px;
-    display: grid;
-    } 
+        width: 55px;
+        height: 55px;
+        display: grid;
+    }
 /*          HEADER          */
     header {
         z-index: 3;
@@ -506,40 +506,40 @@ aside {
     }
 /*          LOGO            */
     .max-logo svg {
-        width: 280px;
+        width: 220px;
         height: auto;
         fill: #ffffff;
     }
     .min-logo svg {
-        width: 230px;
+        width: 190px;
         height: auto;
         fill: #000000;
     }
 /*          LOGO_MIDIAS_SOCIAIS         */
     .max-facebook svg {
-        width: 42px;
+        width: 52px;
         fill: #ffffff;
         display: grid;
-        padding: 5px 0;
+        padding: 5px;
         justify-content: center;
     }
     .max-youtube svg {
-        width: 46px;
+        width: 56px;
         fill: #ffffff;
         display: grid;
-        padding: 5px 0;
+        padding: 5px;
     }
     .max-instagram svg {
-        width: 43px;
+        width: 53px;
         fill: #ffffff;
         display: grid;
-        padding: 5px 0;
+        padding: 5px;
     }
     .max-spotify svg {
-        width: 45px;
+        width: 55px;
         fill: #ffffff;
         display: grid;
-        padding: 5px 0;
+        padding: 5px;
     }
  
 /*          MENU            */
@@ -614,8 +614,9 @@ aside {
         display: grid;
         grid-auto-flow: column;
         grid-gap: 20px;
+        padding: 20px 0;
     }
-    .mobile-nav-bar #menu1 a:onClick::before, #menu1 a:hover::after {
+    .mobile-nav-bar #menu1 a:hover::before, #menu1 a:hover::after {
         transform: scaleX(1);
     }
     .mobile-max-nav {
