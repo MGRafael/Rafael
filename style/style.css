@@ -1,3 +1,4 @@
+/*====================FONTES====================*/
 @font-face {
     src: url("../fonts/Tippa.ttf");
     font-family: "Tippa";
@@ -8,13 +9,19 @@
     font-family: "Essays1743-Bold";
 }
 
+/*====================RESET====================*/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+body {
+    background-color: #ff0000;
+}
+
 li {
+    display: grid;
     width: inherit;
     list-style: none;
     padding: 0;
@@ -22,49 +29,85 @@ li {
 
 a {
     text-decoration: none;
+    color: #ffffff;
+    transition: all 0.6s ease-out;
+}
+
+.mid {
+    display: grid;
+    padding: 0;
+    justify-content: center;
+    align-content: center;
 }
 
 .hover {
-    width: 30px;
-    height: 32px;
+    display: grid;
+    width: 35px;
+    height: 30px;
+    align-content: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    transition: all 0.3s ease-out;
 }
 
-.hover:hover {
-    background-color: #ffffff;
+.hover-f:hover {
+    background-color: #000086;
+}
+.hover-f:hover path {
+    fill: blue;
 }
 
-.hover:hover path {
+.hover-y:hover {
+    background-color: #FF0000;
+}
+.hover-y:hover path {
+    fill: #ffffff;
+}
+
+.hover-i:hover {
+    background-color: #B900B8;
+}
+.hover-i:hover path {
     fill: #000000;
 }
 
-/*=====HEADER=====*/
+.hover-s:hover {
+    background-color: #00DD00;
+}
+.hover-s:hover path {
+    fill: #000000;
+}
+
+
+/*====================HEADER====================*/
 header {
     position: fixed;
     width: 100%;
     z-index: 1;
     font-size: 18px;
-    transition: all 0.5s ease-out;
+    transition: all 0.6s ease-out;
 }
 
 .max-header {
     background-color: #000000;
-    height: 180px;
+    height: 95px;
 }
 
 .min-header {
     background-color: #AF0000;
-    height: 120px;
+    height: 70px;
 }
 
-/*=====CONTAINERS=====*/
+/*====================CONTAINERS====================*/
 .container {
     padding: 0;
-    margin: 0 auto;
+    margin: 0;
+    position: fixed;
 }
 
 .container-menu {
     max-width: 1200px;
-    height: 100%;
     margin: 0 auto;
     padding: 0 60px;
     display: grid;
@@ -74,56 +117,85 @@ header {
     align-content: center;
 }
 
-/*=====LOGO-BANDA=====*/
+.container-body {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 60px;
+    display: grid;
+    grid-template-areas:
+        "bdy ... col";
+    grid-auto-columns: auto 1fr auto;
+    align-content: center;
+}
+
+.container-agenda {
+    max-width: 1200px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    padding-top: 119px;
+    display: grid;
+    align-content: center;
+}
+
+/*====================LOGO_BANDA====================*/
 .logo {
     grid-area: lgo;
 }
 
 .logo svg {
     fill-opacity: 0;
-    transition: all 0.9s ease-out;
+    transition: all 0.9s;
 }
 
 .max-logo svg {
-    width: 250px;
-    height: auto;
-    fill: #ff0000;
-}
-
-.min-logo svg {
-    width: 160px;
-    height: auto;
-    fill: #000000;
-}
-
-/*=====LOGOS MÍDIAS SOCIAIS=====*/
-.midia {
-    justify-content: center;
-}
-
-.facebook {
-    grid-area: mnu;
-    display: grid;
-    align-content: center;
-    justify-content: center;
-}
-
-.facebook svg {
-    transition: all 0.9s ease-out;
-}
-
-.max-facebook svg {
-    width: 22px;
+    padding-top: 10px;
+    width: 350px;
     fill: #ffffff;
     align-content: center;
     justify-content: center;
 }
 
+.min-logo svg {
+    padding: 10px 0 0 0;
+    width: 250px;
+    fill: #000000;
+    align-content: center;
+    justify-content: center;
+}
+
+/*====================LOGOS_MÍDIAS_SOCIAIS====================*/
+.midia {
+    justify-content: center;
+    align-content: center;
+}
+
+.facebook {
+    grid-area: mnu;
+    display: grid;    
+    align-content: center;
+    justify-content: center;
+}
+.facebook svg {
+    display: grid;
+    padding: 0;
+    transition: all 0.9s ease-out;
+}
+.max-facebook svg {
+    display: grid;
+    width: 22px;
+    fill: #ffffff;
+    align-content: center;
+    justify-content: center;
+    padding: 0;
+}
 .min-facebook svg {
+    display: grid;
     width: 20px;
     fill: #000000;
     align-content: center;
     justify-content: center;
+    padding: 0;
 }
 
 .youtube {
@@ -132,25 +204,26 @@ header {
     align-content: center;
     justify-content: center;
 }
-
 .youtube svg {
+    display: grid;
+    padding-top: 0;
     transition: all 0.9s ease-out;
 }
-
 .max-youtube svg {
+    display: grid;
     width: 26px;
     fill: #ffffff;
     align-content: center;
     justify-content: center;
+    padding: 0;
 }
-
 .min-youtube svg {
+    display: grid;
     width: 24px;
     fill: #000000;
     align-content: center;
     justify-content: center;
-    align-content: center;
-    justify-content: center;
+    padding: 0;
 }
 
 .instagram {
@@ -159,23 +232,26 @@ header {
     align-content: center;
     justify-content: center;
 }
-
 .instagram svg {
+    display: grid;
+    padding-top: 0;
     transition: all 0.9s ease-out;
 }
-
 .max-instagram svg {
+    display: grid;
     width: 23px;
     fill: #ffffff;
     align-content: center;
     justify-content: center;
+    padding: 0;
 }
-
 .min-instagram svg {
+    display: grid;
     width: 21px;
     fill: #000000;
     align-content: center;
     justify-content: center;
+    padding: 0;
 }
 
 .spotify {
@@ -184,26 +260,29 @@ header {
     align-content: center;
     justify-content: center;
 }
-
 .spotify svg {
+    display: grid;
+    padding-top: 0;
     transition: all 0.9s ease-out;
 }
-
 .max-spotify svg {
+    display: grid;
     width: 25px;
     fill: #ffffff;
     align-content: center;
     justify-content: center;
+    padding: 0;
 }
-
 .min-spotify svg {
+    display: grid;
     width: 23px;
     fill: #000000;
     align-content: center;
     justify-content: center;
+    padding: 0;
 }
 
-/*=====WEB-NAV-BAR=====*/
+/*====================WEB_NAV_BAR====================*/
 .web-nav-bar {
     grid-area: nav;
     display: grid;
@@ -226,13 +305,6 @@ header {
     justify-content: center;
 }
 
-.web-nav-bar a {
-    position: relative;
-    font-family: "Essays1743-Bold";
-    text-transform: uppercase;
-    transition: all 0.4s ease-out;
-}
-
 .web-nav-bar #menu1 a::before {
     content: "";
     position: absolute;
@@ -246,11 +318,20 @@ header {
     transition: all 0.3s ease-out;
 }
 
-.web-nav-bar a {
+.web-nav-bar a{
     position: relative;
     font-family: "Essays1743-Bold";
     text-transform: uppercase;
     transition: all 0.4s ease-out;
+}
+.web-max-nav a {
+    font-size: 1em;
+    color: #ffffff;
+}
+
+.web-min-nav a {
+    font-size: 0.8em;
+    color: #000000;
 }
 
 .web-nav-bar #menu1 a::after {
@@ -270,7 +351,7 @@ header {
     transform: scaleX(1);
 }
 
-/*=====MOBILE-NAV-BAR=====*/
+/*====================MOBILE_NAV_BAR====================*/
 .mobile-nav-bar {
     grid-area: nav;
     display: grid;
@@ -298,6 +379,15 @@ header {
     font-family: "Essays1743-Bold";
     text-transform: uppercase;
     transition: all 0.4s ease-out;
+}
+.mobile-max-nav a {
+    font-size: 1em;
+    color: #ffffff;
+}
+
+.mobile-min-nav a {
+    font-size: 0.8em;
+    color: #000000;
 }
 
 .mobile-nav-bar #menu1 a::before {
@@ -333,162 +423,105 @@ header {
     transition: all 0.3s ease-out;
 }
 
-.mobile-nav-bar #menu1 a:hover::before,
-#menu1 a:hover::after {
+.mobile-nav-bar #menu1 a:hover::before, #menu1 a:hover::after {
     transform: scaleX(1);
-}
-
-
-.max-nav a {
-    font-size: 1em;
-    color: #ffffff;
-}
-
-.min-nav a {
-    font-size: 0.875em;
-    color: #000000;
 }
 
 .ghost {
     width: 100%;
-    height: 175px;
+    height: 34px;
     background-color: #ff0000;
+    z-index: 0;
 }
 
+aside {
+    margin: 0;
+    width: auto;
+    grid-area: col;
+    box-sizing: border-box;
+    justify-content: center;
+}
+
+.agenda {
+    width: 250px;
+    height: 260px;
+    max-height: 260px;
+    border: 1px solid #ffffff;
+    padding: 5px;
+    margin-top: 20px;
+    word-wrap: break-word;
+    overflow-y: scroll;
+    background-color: rgba(00, 00, 00, 0.8);
+    position: fixed;
+    font-family: "Tippa";
+    font-size: 0.8em;
+    color: #ffffff;
+    z-index: 1;
+}
+
+/*====================MIDIA_CELULAR====================*/
+
 @media(max-width: 768px) {
+    .hover {
+    width: 55px;
+    height: 55px;
+    display: grid;
+    } 
+/*          HEADER          */
     header {
         z-index: 3;
+    }
+    .max-header {
+        height: 80px;
+    }
+    .min-header {
+        height: 70px;
     }
 
     .web-nav-bar {
         display: none;
     }
-
     .mobile-nav-bar {
         display: grid;
         z-index: 2;
     }
-
-    .max-header {
-        height: 140px;
-    }
-
-    .min-header {
-        height: 100px;
-    }
-
+/*          CONTAINERS          */
     .container-menu {
         position: relative;
         padding: 0 20px;
         grid-template-areas:
             "lgo ... mnu";
     }
-
-    .max-logo svg {
-        width: 180px;
-        height: auto;
-        fill: #ff0000;
+    .container-body {
+	    position: relative;
+        padding: 0 20px;
+        grid-template-areas:
+            "bdy";
+        grid-auto-columns: 100% auto auto;
     }
-
+    .container-agenda {
+        padding-top: 140px;
+        display: grid;
+        align-content: center;
+    }
+/*          LOGO            */
+    .max-logo svg {
+        width: 280px;
+        height: auto;
+        fill: #ffffff;
+    }
     .min-logo svg {
-        width: 140px;
+        width: 230px;
         height: auto;
         fill: #000000;
     }
-
-    .menu {
-        grid-area: mnu;
-        display: grid;
-        align-content: center;
-    }
-
-    .hamburger {
-        position: relative;
-        width: 50px;
-        height: 5px;
-        transition: all 0.4s ease-out;
-    }
-
-    .hamburger::before {
-        content: "";
-        position: absolute;
-        top: -12px;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        transition: all 0.4s ease-out;
-        background-color: #ff0000;
-    }
-
-    .hamburger::after {
-        content: "";
-        position: absolute;
-        top: 12px;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        transition: all 0.4s ease-out;
-        background-color: #ff0000;
-    }
-
-    .max-hamburger, .max-hamburger::before, .max-hamburger::after {
-        background-color: #ff0000;
-    }
-
-    .min-hamburger, .min-hamburger::before, .min-hamburger::after {
-        background-color: #ff0000;
-    }
-
-    .close-btn {
-        width: 50px;
-        transform: rotateZ(45deg);
-    }
-
-    .close-btn::before, .close-btn::after {
-        top: 0;
-        transform: rotateZ(90deg);
-    }
-
-    .mobile-nav-bar {
-        position: fixed;
-        top: 0px;
-        right: 0;
-        width: 100%;
-        height: calc(100vh - 140px);
-        align-content: flex-start;
-        background-color: rgba(99, 00, 00, 0.8);
-        transform-origin: 20px;
-        transform: translateY(-100%);
-        transition: all 0.5s ease-out;
-    }
-
-    .mobile-nav-bar #menu1 {
-        display: grid;
-        grid-auto-flow: row;
-        grid-gap: 8px;
-        padding: 20px 0;
-    }
-    .mobile-nav-bar #midia {
-        display: grid;
-        grid-auto-flow: column;
-        grid-gap: 10px;
-    }
-    .mobile-nav-bar #menu1 a:onClick::before, #menu1 a:hover::after {
-    transform: scaleX(1);
-}
-
-    .hover {
-        width: 60px;
-        height: 60px;
-        display: grid;
-        align-content: center;
-        justify-content: center;
-    }   
+/*          LOGO_MIDIAS_SOCIAIS         */
     .max-facebook svg {
         width: 42px;
         fill: #ffffff;
         display: grid;
         padding: 5px 0;
+        justify-content: center;
     }
     .max-youtube svg {
         width: 46px;
@@ -508,57 +541,161 @@ header {
         display: grid;
         padding: 5px 0;
     }
-
-    .max-nav {
-        top: 140px;
-        height: calc(100vh - 140px);
+ 
+/*          MENU            */
+    .menu {
+        grid-area: mnu;
+        display: grid;
+        align-content: center;
     }
-
-    .min-nav {
-        top: 100px;
-        height: calc(100vh - 100px);
+    .hamburger {
+        position: relative;
+        width: 50px;
+        height: 5px;
+        transition: all 0.4s ease-out;
     }
-
-    .menu-opened {
-        transform: translateY(0);
+    .hamburger::before {
+        content: "";
+        position: absolute;
+        top: -12px;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transition: all 0.2 s ease-out;
+        background-color: #ffffff;
     }
-
+    .hamburger::after {
+        content: "";
+        position: absolute;
+        top: 12px;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transition: all 0.2s ease-out;
+        background-color: #ffffff;
+    }
+/*          HAMBURGER_MENU          */
+    .max-hamburger, .max-hamburger::before, .max-hamburger::after {
+        background-color: #ffffff;
+    }
+    .min-hamburger, .min-hamburger::before, .min-hamburger::after {
+        background-color: #ffffff;
+    }
+/*          X_MENU          */
+    .close-btn {
+        width: 50px;
+        transform: rotateZ(45deg);
+    }
+    .close-btn::before, .close-btn::after {
+        top: 0;
+        transform: rotateZ(90deg);
+    }
+    
+/*          NAV_BAR         */
+    .mobile-nav-bar {
+        position: fixed;
+        top: 80px;
+        right: 0;
+        width: 100%;
+        height: calc(100vh);
+        align-content: flex-start;
+        background-color: rgba(99, 00, 00, 0.8);
+        transform-origin: 20px;
+        transform: translateY(-110%);
+        transition: all 0.5s ease-out;
+    }
+    .mobile-nav-bar #menu1 {
+        display: grid;
+        grid-auto-flow: row;
+        grid-gap: 10px;
+        padding: 20px 0;
+    }
+    .mobile-nav-bar #midia {
+        display: grid;
+        grid-auto-flow: column;
+        grid-gap: 20px;
+    }
+    .mobile-nav-bar #menu1 a:onClick::before, #menu1 a:hover::after {
+        transform: scaleX(1);
+    }
+    .mobile-max-nav {
+        top: 80px;
+        height: calc(100vh - 80px);
+    }
+    .mobile-min-nav {
+        top: 68px;
+        height: calc(100vh - 68px);
+    }
     .mobile-nav-bar li {
         text-align: center;
         font-size: 1.8em;
+    }
+
+/*          MENU_FLIP           */
+    .menu-opened {
+        transform: translateY(0);
     }
 
     .min-nav a {
         font-size: 1em;
         color: #ffffff;
     }
+    
+   .ghost {
+        height: 80px;
+    }
+    
+    .agenda {
+        width: 350px;
+        height: 300px;
+        border: 1px solid #ffffff;
+        padding: 10px;
+        margin: 5px;
+        word-wrap: break-word;
+        overflow-y: scroll;
+        background-color: rgba(00, 00, 00, 0.7);
+        font-family: "Tippa";
+        font-size: 1em;
+        color: #ffffff;
+    }
+       
+    main {
+        display: grid;
+    }
 }
 
+
 main {
+    grid-area: bdy;
     position: relative;
-    font-size: 18px;
+    font-size: 1em;
     max-width: 100%;
 }
 
 main section {
-    padding-top: 140px;
     display: grid;
-    justify-content: space-around;
-    align-content: flex-start;
+    justify-content: center;
     font-family: "Tippa";
     font-size: 1em;
     color: #ffffff;
-    z-index: 1
+    z-index: 1;
 }
 
 main section:nth-child(odd) {
-    width: 100%;
+    padding-top: 10%;
     height: 100vh;
     background-color: #ff0000;
 }
 
 main section:nth-child(even) {
+    padding-top: 10%;
+    height: 100vh;
+    background-color: blue;
+}
+
+.efeito-agenda {
     width: 100%;
     height: 100vh;
-    background-color: #ff0000;
+    padding: 0;
+	background-color: rgba(99, 00, 00, 0.7);
 }
