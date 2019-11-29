@@ -657,7 +657,8 @@ aside {
     }
     
     .agenda {
-        width: 350px;
+        width: 280px;
+        max-width: 280px;
         height: 300px;
         border: 1px solid #ffffff;
         padding: 10px;
@@ -674,7 +675,6 @@ aside {
         display: grid;
     }
 }
-
 
 main {
     grid-area: bdy;
