@@ -51,6 +51,42 @@ a {
     transition: all 0.3s ease-out;
 }
 
+/*====================MODAL-BOX====================*/
+#modal {
+    background: rgba(00, 00, 00, 00);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    opacity: 0.6;
+    display: none;
+    z-index: 2;
+}
+.modal-box {
+	background: #000000;
+    width: 100%;
+    height: 300px;
+    position: absolute;
+    top: 65px;
+}
+.close {
+	padding: 5px 10px;
+    border: 1px solid #ccc;
+    position: absolute;
+    right: 24px;
+    top: 1px;
+    border-radius: 7px;
+    color: #000000;
+    border-color: #000000;
+}
+.close:hover {
+	color: #cccccc;
+    border-color: #999999;
+    
+}
+
+
 /*====================EFEITO_MOUSE_SOBRE====================*/
 .hover-f:hover {
     background-color: #000086;
