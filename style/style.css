@@ -693,13 +693,13 @@ main section {
 }
 
 main section:nth-child(odd) {
-    padding-top: 10%;
+    padding-top: 80px;
     height: 100vh;
     background-color: #ff0000;
 }
 
 main section:nth-child(even) {
-    padding-top: 10%;
+    padding-top: 80px;
     height: 100vh;
     background-color: #ff0000;
 }
