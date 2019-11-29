@@ -51,6 +51,7 @@ a {
     transition: all 0.3s ease-out;
 }
 
+/*====================EFEITO_MOUSE_SOBRE====================*/
 .hover-f:hover {
     background-color: #000086;
 }
@@ -66,19 +67,18 @@ a {
 }
 
 .hover-i:hover {
-    background-color: #B900B8;
+    background-color: #690069;
 }
 .hover-i:hover path {
-    fill: #000000;
+    fill: #B900B8;
 }
 
 .hover-s:hover {
-    background-color: #00DD00;
+    background-color: #007300;
 }
 .hover-s:hover path {
-    fill: #000000;
+    fill: #00DD00;
 }
-
 
 /*====================HEADER====================*/
 header {
@@ -380,14 +380,14 @@ header {
     text-transform: uppercase;
     transition: all 0.4s ease-out;
 }
+/*====================FORMAT_FONT_MENU====================*/
 .mobile-max-nav a {
-    font-size: 1em;
+    font-size: 1.1em;
     color: #ffffff;
 }
-
 .mobile-min-nav a {
-    font-size: 0.8em;
-    color: #000000;
+    font-size: 1.1em;
+    color: #ffffff;
 }
 
 .mobile-nav-bar #menu1 a::before {
@@ -463,19 +463,32 @@ aside {
 
 @media(max-width: 768px) {
     .hover {
-        width: 55px;
-        height: 55px;
+        width: 50px;
+        height: 45px;
         display: grid;
     }
+    .hover-f {
+        background-color: #000086;
+}
+    .hover-y {
+        background-color: #FF0000;
+    }
+    .hover-i {
+    background-color: #690069;
+    }
+    .hover-s {
+    background-color: #007300;
+    }
+    
 /*          HEADER          */
     header {
         z-index: 3;
     }
     .max-header {
-        height: 80px;
+        height: 65px;
     }
     .min-header {
-        height: 70px;
+        height: 57px;
     }
 
     .web-nav-bar {
@@ -517,27 +530,27 @@ aside {
     }
 /*          LOGO_MIDIAS_SOCIAIS         */
     .max-facebook svg {
-        width: 52px;
-        fill: #ffffff;
+        width: 44px;
+        fill: blue;
         display: grid;
         padding: 5px;
         justify-content: center;
     }
     .max-youtube svg {
-        width: 56px;
+        width: 48px;
         fill: #ffffff;
         display: grid;
         padding: 5px;
     }
     .max-instagram svg {
-        width: 53px;
-        fill: #ffffff;
+        width: 45px;
+        fill: #B900B8;
         display: grid;
         padding: 5px;
     }
     .max-spotify svg {
-        width: 55px;
-        fill: #ffffff;
+        width: 44px;
+        fill: #00DD00;
         display: grid;
         padding: 5px;
     }
@@ -550,14 +563,14 @@ aside {
     }
     .hamburger {
         position: relative;
-        width: 50px;
+        width: 40px;
         height: 5px;
         transition: all 0.4s ease-out;
     }
     .hamburger::before {
         content: "";
         position: absolute;
-        top: -12px;
+        top: -10px;
         left: 0;
         width: 100%;
         height: 100%;
@@ -567,7 +580,7 @@ aside {
     .hamburger::after {
         content: "";
         position: absolute;
-        top: 12px;
+        top: 10px;
         left: 0;
         width: 100%;
         height: 100%;
@@ -576,14 +589,14 @@ aside {
     }
 /*          HAMBURGER_MENU          */
     .max-hamburger, .max-hamburger::before, .max-hamburger::after {
-        background-color: #ffffff;
+        background-color: red;
     }
     .min-hamburger, .min-hamburger::before, .min-hamburger::after {
-        background-color: #ffffff;
+        background-color: red;
     }
 /*          X_MENU          */
     .close-btn {
-        width: 50px;
+        width: 40px;
         transform: rotateZ(45deg);
     }
     .close-btn::before, .close-btn::after {
@@ -594,7 +607,7 @@ aside {
 /*          NAV_BAR         */
     .mobile-nav-bar {
         position: fixed;
-        top: 80px;
+        top: 65px;
         right: 0;
         width: 100%;
         height: calc(100vh);
@@ -607,43 +620,40 @@ aside {
     .mobile-nav-bar #menu1 {
         display: grid;
         grid-auto-flow: row;
-        grid-gap: 10px;
-        padding: 20px 0;
+        grid-gap: 5px;
+        padding-top: 40px;
     }
     .mobile-nav-bar #midia {
         display: grid;
         grid-auto-flow: column;
-        grid-gap: 20px;
-        padding: 20px 0;
+        grid-gap: 15px;
+        padding-top: 20px;
     }
     .mobile-nav-bar #menu1 a:hover::before, #menu1 a:hover::after {
         transform: scaleX(1);
     }
-    .mobile-max-nav {
-        top: 80px;
-        height: calc(100vh - 80px);
-    }
-    .mobile-min-nav {
-        top: 68px;
-        height: calc(100vh - 68px);
-    }
+/*          format_#MENU-1          */
     .mobile-nav-bar li {
         text-align: center;
-        font-size: 1.8em;
+        font-size: 1.4em;
     }
 
 /*          MENU_FLIP           */
     .menu-opened {
         transform: translateY(0);
     }
-
-    .min-nav a {
-        font-size: 1em;
-        color: #ffffff;
+/*          TAMANHO_MENU_FLIP           */
+    .mobile-max-nav {
+        top: 50px;
+        height: calc(100vh - 50px);
+    }
+    .mobile-min-nav {
+        top: 46px;
+        height: calc(100vh - 46px);
     }
     
-   .ghost {
-        height: 80px;
+    .ghost {
+        height: 65px;
     }
     
     .agenda {
@@ -691,7 +701,7 @@ main section:nth-child(odd) {
 main section:nth-child(even) {
     padding-top: 10%;
     height: 100vh;
-    background-color: blue;
+    background-color: #ff0000;
 }
 
 .efeito-agenda {
