@@ -26,7 +26,7 @@ body {
 
 li {
     display: grid;
-    width: inherit;
+    width: auto;
     list-style: none;
     padding: 0;
     margin: 0;
@@ -47,13 +47,13 @@ a {
 
 .hover {
     display: grid;
-    width: 35px;
+    width: 30px;
     height: 30px;
     align-content: center;
     justify-content: center;
     padding: 0;
     margin: 0;
-    transition: all 0.3s ease-out;
+    transition: all 0.2s ease-out;
 }
 
 /*====================SCROLL-BAR====================*/
@@ -216,7 +216,7 @@ header {
 }
 
 .min-logo svg {
-    padding: 10px 0 0 0;
+    padding-top: 10px;
     width: 250px;
     fill: #000000;
     align-content: center;
@@ -298,7 +298,7 @@ header {
 }
 .max-instagram svg {
     display: grid;
-    width: 23px;
+    width: 22px;
     fill: #ffffff;
     align-content: center;
     justify-content: center;
@@ -326,7 +326,7 @@ header {
 }
 .max-spotify svg {
     display: grid;
-    width: 25px;
+    width: 23px;
     fill: #ffffff;
     align-content: center;
     justify-content: center;
@@ -334,7 +334,7 @@ header {
 }
 .min-spotify svg {
     display: grid;
-    width: 23px;
+    width: 20px;
     fill: #000000;
     align-content: center;
     justify-content: center;
@@ -430,6 +430,7 @@ header {
     display: grid;
     grid-auto-flow: column;
     grid-gap: 20px;
+    padding-top: 10px;
     justify-content: center;
 }
 
@@ -527,7 +528,7 @@ aside {
         height: 45px;
         display: grid;
     }
-    .hover-f onclick{
+    .hover-f click{
         background-color: #000086;
 }
     .hover-y click {
@@ -590,29 +591,36 @@ aside {
     }
 /*          LOGO_MIDIAS_SOCIAIS         */
     .max-facebook svg {
-        width: 44px;
+        width: 45px;
         fill: blue;
         display: grid;
         padding: 5px;
         justify-content: center;
+        align-content: center;
     }
     .max-youtube svg {
-        width: 48px;
+        width: 50px;
         fill: #ffffff;
         display: grid;
         padding: 5px;
+        justify-content: center;
+        align-content: center;
     }
     .max-instagram svg {
-        width: 45px;
+        width: 43px;
         fill: #B900B8;
         display: grid;
         padding: 5px;
+        justify-content: center;
+        align-content: center;
     }
     .max-spotify svg {
-        width: 44px;
+        width: 43px;
         fill: #00DD00;
         display: grid;
         padding: 5px;
+        justify-content: center;
+        align-content: center;
     }
  
 /*          MENU            */
@@ -682,12 +690,6 @@ aside {
         grid-auto-flow: row;
         grid-gap: 5px;
         padding-top: 40px;
-    }
-    .mobile-nav-bar #midia {
-        display: grid;
-        grid-auto-flow: column;
-        grid-gap: 15px;
-        padding-top: 20px;
     }
     .mobile-nav-bar #menu1 a:hover::before, #menu1 a:hover::after {
         transform: scaleX(1);
