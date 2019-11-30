@@ -55,6 +55,18 @@ a {
     transition: all 0.3s ease-out;
 }
 
+/*====================SCROLL-BAR====================*/
+::-webkit-scrollbar {
+    width: 10px;
+}
+  
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgba(255,0,0,0.8); 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+
 /*====================MODAL-BOX====================*/
 #modal {
     background-color: rgba(00, 00, 00, 0.1);
@@ -491,8 +503,9 @@ aside {
     height: 260px;
     max-height: 260px;
     border: 1px solid #ffffff;
+    border-radius: 7px;
     padding: 5px;
-    margin-top: 20px;
+    margin-top: 5px;
     word-wrap: break-word;
     overflow-y: scroll;
     background-color: rgba(00, 00, 00, 0.8);
@@ -741,7 +754,7 @@ main section {
 }
 
 main section:nth-child(odd) {
-    margin: 3px 3px 3px;
+    margin: 3px;
     padding-top: 80px;
     height: 100vh;
     background-color: #E6E6E6;
