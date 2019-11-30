@@ -29,6 +29,7 @@ li {
     width: inherit;
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 a {
@@ -141,9 +142,9 @@ a {
 header {
     position: fixed;
     width: 100%;
-    z-index: 1;
     font-size: 18px;
     transition: all 0.6s ease-out;
+    z-index: 1;
 }
 
 .max-header {
@@ -526,16 +527,16 @@ aside {
         height: 45px;
         display: grid;
     }
-    .hover-f {
+    .hover-f onclick{
         background-color: #000086;
 }
-    .hover-y {
+    .hover-y click {
         background-color: #FF0000;
     }
-    .hover-i {
+    .hover-i click {
     background-color: #690069;
     }
-    .hover-s {
+    .hover-s click {
     background-color: #007300;
     }
     
