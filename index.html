@@ -8,27 +8,36 @@
     <title>AMNEHSIA</title>
     
     <!-- JAVASCRIPT LINK -->
-    <script type="text/javascript">
-        $(document).ready(function(e){
-            $('bnt-modal').click(function(){
-                $('#modal').fadeIn(500);
-            });
-        });
-    </script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+            $(document).ready(function(e) {
+                $('.pagina').click(function() {
+                    $('#modal').fadeIn(500);
+                    
+                    $('.modal-box-agenda').load("agenda.html");
+                    
+                });
+                    
+                $('.close, #modal').click(function(event){
+                    if(event.target !== this){
+                        return;
+                    }
+                    $('#modal').fadeOut(500);
+                });
+            })
+        </script>
     <!-- FIM JAVASCRIPT LINK -->
     
 </head>
     <body>
         
         <!--MODAL-BOX-->
-        <div id="modal">
-            <div class="modal-box">
-                <div class="modal-box-agenda">
-                
+            <div id="modal">
+                <div class="modal-box">
+                    <div class="modal-box-agenda"></div>
+                    <div class="close">X</div>
                 </div>
-                <div class="close">X</div>
             </div>
-        </div>
         <!--FIM MODAL-BOX-->
         
         <header class="max-header">
@@ -109,7 +118,7 @@
                         <li class="int-link"><a href="#inicio">Inicio</a></li>
                         <li class="int-link"><a href="#sobre">Sobre</a></li>
                         <li class="int-link"><a href="#galeria">Galeria</a></li>
-                        <li class="bnt-modal"><a>Agenda</a></li>
+                        <li><a href="#agenda.html" class="pagina">Agenda</a></li> <!-- LINK MODAL -->
                     </ul>
                     <ul id="midia">
                         <li class="hover hover-f">
@@ -182,7 +191,6 @@
     
     <script type="text/javascript" src="script/nav_bar.js"></script>
     <script type="text/javascript" src="script/header.js"></script>
-<!--    <script type="text/javascript" src="script/scroll_suave.js"></script>-->
 </body>
 
 </html>
