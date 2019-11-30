@@ -748,7 +748,7 @@ main section:nth-child(odd) {
 }
 
 main section:nth-child(even) {
-    margin: 3px 3px 3px;
+    margin: 0 3px 3px;
     padding-top: 80px;
     height: 100vh;
     background-color: #E6E6E6;
