@@ -7,8 +7,37 @@
     <title></title>
     <link rel="stylesheet" href="style/style.css">
 </head>
-
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        $(document).ready(function(e) {
+            $('.pagina').click(function() {
+                event.preventDefault();
+                $('#modal').fadeIn(500);
+                
+                $('.modal-box-conteudo').load("agenda.html");
+                
+            });
+            
+            $('.close, #modal').click(function(event) {
+               if(event.target !== this) {
+                   return;
+                }
+                $('#modal').fadeOut(500);
+            });
+        });
+    </script>
+    
 <body>
+<!--    MODAL_BOX-->
+    <div id="modal">
+        <div class="modal-box">
+            <div class="modal-box-conteudo">
+            </div>
+            <div class="close">X</div>
+        </div>
+    </div>
+<!--        FIM_MODAL_BOX-->
+        
     <header class="max-header">
             <div class="container-menu">
                 <nav class="logo max-logo">
