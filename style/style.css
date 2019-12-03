@@ -138,6 +138,7 @@ a {
 .hover-tbl:hover {
     background-color: #eeeeee;
     color: #666666;
+    cursor: context-menu;
 }
 
 /*====================HEADER====================*/
@@ -505,8 +506,8 @@ aside {
 }
 
 .agenda {
-    width: 250px;
-    height: 260px;
+    width: 285px;
+    height: 205px;
     border: 1px solid #ffffff;
     border-radius: 7px;
     padding: 5px;
