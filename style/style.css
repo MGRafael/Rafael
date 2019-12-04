@@ -745,7 +745,7 @@ aside {
 main {
     grid-area: bdy;
     position: relative;
-    font-size: 1em;
+    font-size: 0.8em;
     max-width: 100%;
 }
 
@@ -756,7 +756,6 @@ main section {
     display: grid;
     justify-content: center;
     font-family: "Tippa";
-    font-size: 0.7em;
     color: #000000;
 }
 
