@@ -750,7 +750,7 @@ main {
 }
 
 main section {
-    padding-top: 90px;
+    padding: 80px 20px 20px 20px;
     margin: 3px;
     border-radius: 50px;
     display: grid;
@@ -758,6 +758,7 @@ main section {
     font-family: "Tippa";
     font-size: 1em;
     color: #000000;
+    text-align: justify;
 }
 
 main section:nth-child(odd) {
