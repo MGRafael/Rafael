@@ -756,9 +756,8 @@ main section {
     display: grid;
     justify-content: center;
     font-family: "Tippa";
-    font-size: 1em;
+    font-size: 0.8em;
     color: #000000;
-    text-align: justify;
 }
 
 main section:nth-child(odd) {
