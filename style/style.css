@@ -745,7 +745,7 @@ aside {
 main {
     grid-area: bdy;
     position: relative;
-    font-size: 0.8em;
+    font-size: 1em;
     max-width: 100%;
 }
 
